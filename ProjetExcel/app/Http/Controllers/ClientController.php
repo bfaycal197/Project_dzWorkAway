@@ -58,7 +58,7 @@ class ClientController extends Controller
         $pdfPath = $cvPath ? Storage::path($cvPath) : null;
     
         // Envoyer l'e-mail avec le fichier PDF en pièce jointe à l'adresse spécifiée
-        $destinationEmail = 'faycalbabaahmed197@gmail.com';
+        $destinationEmail = '@gmail.com';
         Mail::to($destinationEmail)->send(new ExportMail(null, $pdfPath, $request->name, $request->lastName));
     
         // Retourner une réponse JSON pour indiquer que le client a été ajouté avec succès
